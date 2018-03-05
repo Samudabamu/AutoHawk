@@ -2,4 +2,7 @@
 
 <% @users.each do |user| %>
 <%= link_to user.username, user_path(user.id) %> </br>
+
 <% end %>
+
+<%= link_to 'Home', root_path %> </br>

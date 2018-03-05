@@ -1,6 +1,6 @@
 <h1>User Login</h1>
 
-<%= form_tag '/login' do %>
+<%= form_for '/pages' do %>
 <fieldset>
   Email: <%= text_field_tag :email %>
 </fieldset>
@@ -9,5 +9,9 @@
 </fieldset>
 
   <%= submit_tag "Submit" %>
+
+  <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
 
 <% end %>

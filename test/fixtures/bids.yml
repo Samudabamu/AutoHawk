@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  current_bid: 1
+  opening_bid: 1
+  bidder_user_id: 1
+
+two:
+  current_bid: 1
+  opening_bid: 1
+  bidder_user_id: 1

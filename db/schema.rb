@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180224102225) do
+ActiveRecord::Schema.define(version: 20180303062418) do
+
+  create_table "bids", force: :cascade do |t|
+    t.integer "current_bid"
+    t.integer "opening_bid"
+    t.integer "bidder_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cars", force: :cascade do |t|
+    t.string "make"
+    t.integer "year"
+    t.integer "kilometers"
+    t.string "model"
+    t.integer "opening_bid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favourites", force: :cascade do |t|
+    t.text "number_plate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
