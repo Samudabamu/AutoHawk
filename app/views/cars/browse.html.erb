@@ -1,0 +1,7 @@
+<h1>Cars#browse</h1>
+<p>Find me in app/views/cars/browse.html.erb</p>
+
+
+<%= select_tag 'make', options_for_select(@make.pluck('make'))%>
+
+<%= select_tag 'model', options_for_select(@models.pluck('model'),'1000')%>

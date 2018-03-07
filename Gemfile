@@ -55,5 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development do
   gem 'pry-rails'
   gem 'bcrypt'
+  gem 'webpacker'
 
 end

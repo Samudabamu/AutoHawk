@@ -1,0 +1,10 @@
+{
+  "application.js": "/packs/application-22d231016fe6a8a95a0c.js",
+  "application.js.map": "/packs/application-22d231016fe6a8a95a0c.js.map",
+  "auth.js": "/packs/auth-0a1bd0e26210b7d08a6a.js",
+  "auth.js.map": "/packs/auth-0a1bd0e26210b7d08a6a.js.map",
+  "components/App.js": "/packs/components/App-b3fe341551fd545cc13c.js",
+  "components/App.js.map": "/packs/components/App-b3fe341551fd545cc13c.js.map",
+  "hello_react.js": "/packs/hello_react-4f25baf4f332f481920f.js",
+  "hello_react.js.map": "/packs/hello_react-4f25baf4f332f481920f.js.map"
+}
