@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :pages
   resources :cars
   resources :favourites
+  resources :bids
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

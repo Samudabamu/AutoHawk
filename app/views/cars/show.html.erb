@@ -1,0 +1,40 @@
+
+<% if @car_auction.bid_status == "live" %>
+
+<h1>Live Auction</h1>
+
+<%= image_tag 'Maserati.png' %><br/><br/>
+
+  Make: <%= @car_auction.make %> <br/>
+  Model:<%= @car_auction.model %> <br/>
+  Year:<%= @car_auction.year %> <br/>
+  Kilometers:<%= @car_auction.kilometers %> <br/>
+  <h3>Opening Bid: $<%= @car_auction.opening_bid %></h3>
+  <% if @last_bid %>
+    <h3>Current Bid: $<span id="currentBid"><%= @last_bid.amount %></span></h3>
+  <% else %>
+    <div id="firstBidContainer">Please make a bid.</div>
+    <div id="currentBidContainer" style="display:none">
+      <h3>Current Bid: $<span id="currentBid"></span></h3>
+    </div>
+  <% end %>
+
+  <div id="errorMsg" style="color:red"></div>
+
+  <%= form_for Bid.new, remote: true do |f| %>
+  Your Bid: $<%= f.number_field :amount %><br />
+    <%= f.hidden_field :car_id, value: @car_auction.id %>
+    <%= f.submit %>
+  <% end %>
+
+<% else %>
+
+<h1> This Auction Has Ended</h1>
+
+Make: <%= @car_auction.make %> <br/>
+Model:<%= @car_auction.model %> <br/>
+Year:<%= @car_auction.year %> <br/>
+Kilometers:<%= @car_auction.kilometers %> <br/>
+ <h2>Winning Bid $<span id="currentBid"><%= @last_bid.amount %></span></h3>
+
+<% end  %>

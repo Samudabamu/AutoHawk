@@ -1,0 +1,21 @@
+console.log('hi,<%= @status %>');
+
+
+
+
+<% if @error %>
+  $('#errorMsg').html(' <%= @error %>')
+  console.log('error', '<%= @error %>');
+  $("#errorMsg").show();
+<% else %>
+  $('#currentBid').html('<%= @bid.amount %>')
+  $("#currentBidContainer").show();
+  $("#firstBidContainer").hide();
+  $("#errorMsg").hide();
+  console.log('bid created', '<%= @bid.amount %>')
+<% end %>
+
+
+
+
+//Don't under the code in line 3, what is bid.amount referencing?

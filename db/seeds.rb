@@ -8,11 +8,6 @@ puts "Created #{User.all.length} users."
 
 
 
-
-
-
-
-
 dir = File.expand_path File.dirname(__FILE__)
 file = File.read("#{dir}/cars.json")
 

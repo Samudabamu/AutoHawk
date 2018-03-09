@@ -1,7 +1,16 @@
-<h1>Cars#browse</h1>
-<p>Find me in app/views/cars/browse.html.erb</p>
+<div class="text-center">
+
+<h1>Auction Finder</h1>
 
 
-<%= select_tag 'make', options_for_select(@make.pluck('make'))%>
+<%= select_tag 'make', options_for_select(@make.pluck('make'),'Maserati')%>
 
-<%= select_tag 'model', options_for_select(@models.pluck('model'),'1000')%>
+<%= select_tag 'model', options_for_select(@models.pluck('model'),'Quattroporte')%>
+<br/>
+<br/>
+<br/>
+
+
+<%= link_to 'Search', '/browse/auction' %>
+
+</div>

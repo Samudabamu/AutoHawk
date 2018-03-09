@@ -1,18 +1,20 @@
-<h1>User Login</h1>
 
+<div class="text-center">
 
+  <%= image_tag 'AutoHawk_Logo.png' %>
+  <%= form_for '/pages' do %>
+  <h3>User Login</h3>
 
-<%= image_tag '350x250.png' %>
-
-<%= form_for '/pages' do %>
-<fieldset>
-  Email: <%= text_field_tag :email %>
-</fieldset>
-<fieldset>
-  Password: <%= password_field_tag :password %>
-</fieldset>
+  <fieldset>
+    Email: <%= text_field_tag :email %>
+  </fieldset>
+  <fieldset>
+    Password: <%= password_field_tag :password %>
+  </fieldset>
 
   <%= submit_tag "Submit" %>
+</div>
+
 
   <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
