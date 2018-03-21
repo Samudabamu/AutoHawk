@@ -2,14 +2,18 @@
 
 <h1>Auction Finder</h1>
 
+ <!-- Need to be flagged as selected -->
 
-<%= select_tag 'make', options_for_select(@make.pluck('make'),'Maserati')%>
+<%= select_tag 'make',options_for_select(@make.pluck('make')), :include_blank => 'Make'  %>
 
-<%= select_tag 'model', options_for_select(@models.pluck('model'),'Quattroporte')%>
+
+<%= select_tag 'model', options_for_select(@models.pluck('model')),:include_blank => 'Model'%>
+
 <br/>
 <br/>
 <br/>
 
+<!-- Need to have a dynamic URL created below using a function that takes the values from the drop down menu's -->
 
 <%= link_to 'Search', '/browse/auction' %>
 
